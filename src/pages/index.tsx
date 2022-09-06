@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useContext } from "react";
 import styled from "styled-components";
 
 const Home: NextPage = () => {
@@ -24,6 +25,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${({ theme }) => theme.background__color};
 `;
 
 const Wrapper = styled.div`
@@ -33,6 +35,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   .title {
+    color: ${props => props.theme.text__color__primary};
     font-size: 2.5rem;
     font-weight: 900;
   }
